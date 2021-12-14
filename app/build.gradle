@@ -11,8 +11,6 @@ plugins {
     id 'application'
 }
 
-sourceCompatibility = 10
-
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -28,7 +26,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'jp.ac.uryukyu.ie.e215719.App'
+    mainClass = 'jp.ac.uryukyu.ie.e215719.Main'
 }
 
 tasks.named('test') {
@@ -36,8 +34,9 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+sourceCompatibility = 10
 jar {
     manifest {
-        attributes  "Main-Class": "jp.ac.uryukyu.ie.e215719.App"
+        attributes  "Main-Class": "jp.ac.uryukyu.ie.e215719.Main"
     }
 }
